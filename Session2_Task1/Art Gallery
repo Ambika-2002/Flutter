@@ -1,1 +1,120 @@
+import 'package:flutter/material.dart';
 
+void main() => runApp(HarryPotterApp());
+
+class HarryPotterApp extends StatelessWidget {
+  const HarryPotterApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 226, 132, 255),
+          centerTitle: true,
+          titleTextStyle: TextStyle(color: Colors.black, fontSize: 30),
+          title: const Text("Art Gallery App"),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [
+              Color.fromARGB(255, 52, 8, 173),
+              Color.fromARGB(255, 97, 0, 32)
+            ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+          ),
+        ),
+        body: ListView(
+          children: [
+            Row(
+              children: [
+                Image.asset(
+                  "mona.jpg",
+                  height: 200,
+                  width: 200,
+                ),
+                const SizedBox(width: 15),
+                const Text(
+                  "Leonardo Da Vinci, Mona Lisa, 1503–19",
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Image.asset(
+                  "gp.jpg",
+                  height: 200,
+                  width: 200,
+                ),
+                const SizedBox(width: 15),
+                const Text(
+                  "Johannes Vermeer, Girl with a Pearl Earring, 1665",
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Image.asset(
+                  "del.jpg",
+                  height: 200,
+                  width: 200,
+                ),
+                const SizedBox(width: 15),
+                const Text(
+                  "Hieronymus Bosch, The Garden of Earthly Delights, 1503–1515",
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Image.asset(
+                  "kiss.jpg",
+                  height: 200,
+                  width: 200,
+                ),
+                const SizedBox(width: 15),
+                const Text(
+                  "Gustav Klimt, The Kiss, 1907–1908",
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Image.asset(
+                  "sn.png",
+                  height: 200,
+                  width: 200,
+                ),
+                const SizedBox(width: 15),
+                const Text(
+                  "Vincent van Gogh, The Starry Night, 1889",
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Image.asset(
+                  "the.jpg",
+                  height: 200,
+                  width: 200,
+                ),
+                const SizedBox(width: 15),
+                const Text(
+                  "Jan van Eyck, The Arnolfini Portrait, 1434",
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
