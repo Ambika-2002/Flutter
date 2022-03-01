@@ -1,0 +1,123 @@
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(ArtGalleryApp());
+
+class ArtGalleryApp extends StatelessWidget {
+  const ArtGalleryApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          titleTextStyle: TextStyle(color: Colors.white, fontSize: 30),
+          title: const Text("Olympus Welcomes You to Exposition D'Art"),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [
+                  Color.fromARGB(255, 52, 8, 173),
+                  Color.fromARGB(255, 97, 0, 32)
+                ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
+          ),
+        ),
+        body: ListView(
+          children: [
+            Row(
+              children: [
+                Image.asset(
+                  "Mona Lisa.jpg",
+                  height: 350,
+                  width: 300,
+                ),
+                Container(
+                  child: const Text(
+                      "Mona Lisa was created by Italian artist Leonardo da Vinci in 1503 and is located at Louvre Museum"),
+                  alignment: Alignment.center,
+                  width: 350,
+                  height: 350,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.lightGreen,
+                  ),
+                  margin: EdgeInsets.all(25.0),
+                  padding: EdgeInsets.all(40.0),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Image.asset(
+                  "The School of Athens.jpg",
+                  height: 300,
+                  width: 300,
+                ),
+                Container(
+                  child: const Text(
+                      "The School of Athens was made by artist Raphael between 1509 and 1511 and is now located in Raphael Rooms"),
+                  alignment: Alignment.center,
+                  width: 350,
+                  height: 350,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.lightGreen,
+                  ),
+                  margin: EdgeInsets.all(25.0),
+                  padding: EdgeInsets.all(40.0),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Image.asset(
+                  "Creation of Adam.jpg",
+                  height: 300,
+                  width: 300,
+                ),
+                Container(
+                  child: const Text(
+                      "Creation of Adams was created by another Renaissance artist Michelangelo in 1512 and is being preserved at Sistine Chapel"),
+                  alignment: Alignment.center,
+                  width: 350,
+                  height: 350,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.lightGreen,
+                  ),
+                  margin: EdgeInsets.all(25.0),
+                  padding: EdgeInsets.all(40.0),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Image.asset(
+                  "The Birth of Venus.jpg",
+                  height: 300,
+                  width: 300,
+                ),
+                Container(
+                  child: const Text(
+                      "The Birth of Venus was created by Sandro Botticelli between 1485 and 1486 and is located at Uffizi Gallery"),
+                  alignment: Alignment.center,
+                  width: 350,
+                  height: 350,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.lightGreen,
+                  ),
+                  margin: EdgeInsets.all(25.0),
+                  padding: EdgeInsets.all(40.0),
+                ),
+              ],
+            ),
+          ],
+          reverse: true,
+          addAutomaticKeepAlives: false,
+          cacheExtent: 100.0,
+        ),
+      ),
+    );
+  }
+}
